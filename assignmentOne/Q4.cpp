@@ -19,4 +19,5 @@ int main()
     int p;
     p=greatest(a);
     cout << endl << "The greatest number in that array is: " << p;
+    return 0;
 }

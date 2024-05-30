@@ -11,4 +11,5 @@ int main()
         sum=sum+i;
     }
     cout << "The sum of all natural numbers to " << n <<" is " << sum;
+    return 0;
 }
