@@ -27,4 +27,5 @@ int main()
 
     cout<<"Area of the room:"<< room1.calculateArea() << "cm^2."<<endl;
     cout<<"Volume of the room:"<< room1.calculateVolume() << "cm^3."<<endl;
+    return 0;
 }
