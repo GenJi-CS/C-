@@ -1,0 +1,24 @@
+Constructor
+
+A special kind of class member function that is automatically called when an object of that class is instantiated.
+Typically used to initialize member variables of the class to appropriate default or user-provided values, or to do any setup steps necessary for the class to be used.(eg: open a file or database)
+Unlike normal member functions, constructors have specific rule for how they must be named:
+    Constructors must have the same name as the class(with the same capitalization)
+    Constructors have no return type
+
+Recall the Point class
+//Point.h
+
+#pragma once
+class Point
+{
+    private:
+        double x,y;
+    
+    public:
+        Point();//Constructor Declaration
+        void print() const
+        {
+            std::cout<<"x="<<x<<",y="<<y<<std::endl;
+        }
+}
