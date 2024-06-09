@@ -17,6 +17,12 @@ class rect
         double length,breadth;
     
     public:
+        rect()
+        {
+            setPoints();
+            getDimensions();
+            cout<<"The perimeter of the given rectangle is: "<<perimeter()<<" Units."<<endl;
+        }
         void setPoints()
         {
             cout<<"Enter either topLeft and bottomRight or topRight and bottomLeft dimensions!"<<endl;
@@ -48,8 +54,5 @@ class rect
 int main()
 {
     rect R1;
-    R1.setPoints();
-    R1.getDimensions();
-    cout<<"The perimeter of the given rectangle is: "<<R1.perimeter()<<" Units."<<endl;
     return 0;
 }
