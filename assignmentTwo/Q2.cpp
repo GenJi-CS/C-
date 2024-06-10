@@ -46,7 +46,7 @@ void Student::setter()
     }
     float p=(sum/500.0)*100.0;
     if (p < 0.0 || p > 100.0) xx=Invalid;
-    else if(p<100.0 && p>85.0) xx=A;
+    else if(p<=100.0 && p>85.0) xx=A;
     else if(p<85.0 && p>75.0) xx=AMinus;
     else if(p<75.0 && p>70.0) xx=BPlus;
     else if(p<70.0 && p>60.0) xx=B;
@@ -55,7 +55,7 @@ void Student::setter()
     else if(p<45.0 && p>35.0) xx=C;
     else if(p<35.0 && p>30.0) xx=CMinus;
     else if(p<30.0 && p>25.0) xx=D;
-    else if(p<25.0 && p>0.0) xx=F;
+    else if(p<25.0 && p>=0.0) xx=F;
 }
 void Student::display()
 {
