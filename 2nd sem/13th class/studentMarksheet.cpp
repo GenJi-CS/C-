@@ -1,5 +1,5 @@
-//multiple inheritance
-
+//single inheritance
+ 
 #include<iostream>
 using namespace std;
 
@@ -56,7 +56,7 @@ class Marks: public Student
         }
         void calculate()
         {
-            per = (sub1 + sub2 + sub3) / 3 * 100;
+            per = (sub1 + sub2 + sub3) / 3;
             cout<<"\nTotal percentage:"<<per;
         }
 };
