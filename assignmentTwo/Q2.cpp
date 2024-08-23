@@ -3,7 +3,8 @@ Deﬁne an enum called Grade, with the following values: A, A-, B+, B, B-, C+, C
 Modify Student class (deﬁned in previous question)
 to store the grade of the student by adding a data member of type Grade 
 and its getter and setter.*/
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 enum Grade
 {
