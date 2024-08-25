@@ -58,7 +58,7 @@ class Calculator
 int main() {
 
     char type;
-    std::cout << "Enter 'i' for integer array or 'f' for float array: ";
+    std::cout << "Enter 'i' for integer or 'f' for float: ";
     std::cin >> type;
 
     if (type == 'i') {
