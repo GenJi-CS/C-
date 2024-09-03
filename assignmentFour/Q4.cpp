@@ -10,35 +10,35 @@ interactive.*/
 using namespace std;
 
 class my_Distance {
-private:
-    int meter;
-    float centimeter;
+    private:
+        int meter;
+        float centimeter;
 
-public:
-    my_Distance(int m = 0, float cm = 0.0) : meter(m), centimeter(cm) {}
+    public:
+        my_Distance(int m = 0, float cm = 0.0) : meter(m), centimeter(cm) {}
 
-    void get_Dist() {
-        cout << "Enter meters: ";
-        cin >> meter;
-        cout << "Enter centimeters: ";
-        cin >> centimeter;
-    }
-
-    void show_Dist() const {
-        cout << "Distance: " << meter << " meters and " << centimeter << " centimeters" << endl;
-    }
-
-    my_Distance& operator+=(const my_Distance &d) {
-        meter += d.meter;
-        centimeter += d.centimeter;
-
-        if (centimeter >= 100) {
-            meter += int(centimeter) / 100;
-            centimeter = int(centimeter) % 100 + (centimeter - int(centimeter));
+        void get_Dist() {
+            cout << "Enter meters: ";
+            cin >> meter;
+            cout << "Enter centimeters: ";
+            cin >> centimeter;
         }
 
-        return *this;
-    }
+        void show_Dist() const {
+            cout << "Distance: " << meter << " meters and " << centimeter << " centimeters" << endl;
+        }
+
+        my_Distance& operator+=(const my_Distance &d) {
+            meter += d.meter;
+            centimeter += d.centimeter;
+
+            if (centimeter >= 100) {
+                meter += int(centimeter) / 100;
+                centimeter = int(centimeter) % 100 + (centimeter - int(centimeter));
+            }
+
+            return *this;
+        }
 };
 
 int main() {

@@ -13,7 +13,7 @@ class Father
     public:
         Father()
         {
-            std::cout<<"Enter salary of father: "<<std::endl;
+            std::cout<<"Enter salary of father: ";
             std::cin>>salary;
         }
 };
@@ -25,7 +25,7 @@ class Mother
     public:
         Mother()
         {
-            std::cout<<"Enter salary of mother: "<<std::endl;
+            std::cout<<"Enter salary of mother: ";
             std::cin>>salaryx;
         }
 };
@@ -53,4 +53,5 @@ int main()
     std::cout << "Enter the months for the expenses to be calculated: " <<std::endl;
     std::cin>>months;
     std::cout<<"The expenses of the daughter for " << months << " months is " << dx.expenseCalc(months) << " Rs." <<std::endl;
+    return 0;
 }

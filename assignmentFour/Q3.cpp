@@ -26,7 +26,7 @@ class Employee
 
     Employee() 
     {
-        cout << "Enter the name of the employee: " << endl;
+        cout << "Enter the name of the employee: ";
         cin >> name;
         cout << "Enter the salary per day for the employee: ", cin >> dailySalary;
     }
@@ -57,14 +57,14 @@ class ADHOC : public Employee
 {
     public:
         int days;
-        float wage = dailySalary*days;
-
+        float wage;
     ADHOC()
     {
         cout << "Enter the number of days the employee has been working for: ", cin >> days;
     }
     float calcWage()
     {
+        wage = dailySalary*days;
         return wage;
     }
 };
@@ -72,7 +72,7 @@ class ADHOC : public Employee
 int main()
 {
     int choice;
-    cout << "Choose:\n1. Regular\n2.ADHOC"<<endl, cin >> choice , cout << endl;
+    cout << "1. Regular\n2.ADHOC"<<endl << "Enter choice: ", cin >> choice;
     if(choice == 1) {
         Regular r1;
         cout << "The salary for employee is " << r1.calcSalary() << " Rs." << endl;
@@ -84,6 +84,9 @@ int main()
     }
         
         
-    else{ cout << "Wrong Input!";}
+    else{ 
+        cout << "Wrong Input!";
+    }
+    
     return 0;
 }

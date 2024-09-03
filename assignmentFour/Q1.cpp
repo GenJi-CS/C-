@@ -3,61 +3,61 @@
 #include <iostream>
 
 class Matrix {
-private:
-    int rows, cols;
-    int** data;
+    private:
+        int rows, cols;
+        int** data;
 
-public:
-    Matrix(int r, int c) : rows(r), cols(c) {
-        data = new int*[rows];
-        for (int i = 0; i < rows; ++i) {
-            data[i] = new int[cols];
-        }
-    }
-
-    ~Matrix() {
-        for (int i = 0; i < rows; ++i) {
-            delete[] data[i];
-        }
-        delete[] data;
-    }
-
-    void inputMatrix() {
-        std::cout << "Enter the elements of the matrix (" << rows << "x" << cols << "):\n";
-        for (int i = 0; i < rows; ++i) {
-            for (int j = 0; j < cols; ++j) {
-                std::cin >> data[i][j];
+    public:
+        Matrix(int r, int c) : rows(r), cols(c) {
+            data = new int*[rows];
+            for (int i = 0; i < rows; ++i) {
+                data[i] = new int[cols];
             }
         }
-    }
 
-    void displayMatrix() const {
-        for (int i = 0; i < rows; ++i) {
-            for (int j = 0; j < cols; ++j) {
-                std::cout << data[i][j] << "\t";
+        ~Matrix() {
+            for (int i = 0; i < rows; ++i) {
+                delete[] data[i];
             }
-            std::cout << "\n";
-        }
-    }
-
-    Matrix operator*(const Matrix& other) {
-        if (cols != other.rows) {
-            throw std::invalid_argument("Matrix dimensions do not allow multiplication.");
+            delete[] data;
         }
 
-        Matrix result(rows, other.cols);
-
-        for (int i = 0; i < rows; ++i) {
-            for (int j = 0; j < other.cols; ++j) {
-                result.data[i][j] = 0;
-                for (int k = 0; k < cols; ++k) {
-                    result.data[i][j] += data[i][k] * other.data[k][j];
+        void inputMatrix() {
+            std::cout << "Enter the elements of the matrix (" << rows << "x" << cols << "):\n";
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    std::cin >> data[i][j];
                 }
             }
         }
 
-        return result;
-    }
+        void displayMatrix() const {
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    std::cout << data[i][j] << "\t";
+                }
+                std::cout << "\n";
+            }
+        }
+
+        Matrix operator*(const Matrix& other) {
+            if (cols != other.rows) {
+                throw std::invalid_argument("Matrix dimensions do not allow multiplication.");
+            }
+
+            Matrix result(rows, other.cols);
+
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < other.cols; ++j) {
+                    result.data[i][j] = 0;
+                    for (int k = 0; k < cols; ++k) {
+                        result.data[i][j] += data[i][k] * other.data[k][j];
+                    }
+                }
+            }
+
+            return result;
+        }
 };
 
 int main() {
@@ -70,11 +70,6 @@ int main() {
 
     std::cout << "Enter the number of rows and columns for matrix M2: ";
     std::cin >> rows2 >> cols2;
-    if (cols1 != rows2) {
-        std::cerr << "Error: Matrix dimensions do not allow multiplication.\n";
-        return 1;
-    }
-
     Matrix M2(rows2, cols2);
     M2.inputMatrix();
 

@@ -9,57 +9,57 @@ display the data.*/
 using namespace std;
 
 class Publication {
-protected:
-    string title;
-    float price;
+    protected:
+        string title;
+        float price;
 
-public:
-    void getdata() {
-        cout << "Enter title: ";
-        cin.ignore();
-        getline(cin, title);
-        cout << "Enter price: ";
-        cin >> price;
-    }
+    public:
+        void getdata() {
+            cout << "Enter title: ";
+            cin.ignore();
+            getline(cin, title);
+            cout << "Enter price: ";
+            cin >> price;
+        }
 
-    void putdata() const {
-        cout << "Title: " << title << endl;
-        cout << "Price: " << price << " Rs." << endl;
-    }
+        void putdata() const {
+            cout << "Title: " << title << endl;
+            cout << "Price: " << price << " Rs." << endl;
+        }
 };
 
 class Book : public Publication {
-private:
-    int page_count;
+    private:
+        int page_count;
 
-public:
-    void getdata() {
-        Publication::getdata();
-        cout << "Enter page count: ";
-        cin >> page_count;
-    }
+    public:
+        void getdata() {
+            Publication::getdata();
+            cout << "Enter page count: ";
+            cin >> page_count;
+        }
 
-    void putdata() const {
-        Publication::putdata();
-        cout << "Page Count: " << page_count << endl;
-    }
+        void putdata() const {
+            Publication::putdata();
+            cout << "Page Count: " << page_count << endl;
+        }
 };
 
 class Tape : public Publication {
-private:
-    float playing_time_in_minutes;
+    private:
+        float playing_time;
 
-public:
-    void getdata() {
-        Publication::getdata();
-        cout << "Enter playing time (in minutes): ";
-        cin >> playing_time_in_minutes;
-    }
+    public:
+        void getdata() {
+            Publication::getdata();
+            cout << "Enter playing time (in minutes): ";
+            cin >> playing_time;
+        }
 
-    void putdata() const {
-        Publication::putdata();
-        cout << "Playing Time: " << playing_time_in_minutes << " minutes" << endl;
-    }
+        void putdata() const {
+            Publication::putdata();
+            cout << "Playing Time: " << playing_time << " minutes" << endl;
+        }
 };
 
 int main() {

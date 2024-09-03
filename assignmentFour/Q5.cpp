@@ -8,6 +8,7 @@ serial number. It should respond to Object number: 1, Object number :2 and so on
 #include <iostream>
 using namespace std;
 
+int SerialNumber::count = 0;
 class SerialNumber {
 private:
     static int count;
@@ -23,7 +24,6 @@ public:
     }
 };
 
-int SerialNumber::count = 0;
 
 int main() {
     SerialNumber obj1, obj2, obj3,obj4,obj5;

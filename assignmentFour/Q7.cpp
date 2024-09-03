@@ -8,6 +8,7 @@ objects i.e circle and cylinder. (Circle surface area = pi*r*r and cylinder surf
 2*pi*r*r+2*r*h).*/
 
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 const float PI = 3.14159;
@@ -23,7 +24,7 @@ public:
     }
 
     float area() const {
-        return PI * radius * radius;
+        return PI * pow(radius,2);
     }
 
     void display() const {
@@ -42,7 +43,7 @@ public:
     }
 
     float area() const {
-        return 2 * PI * radius * (radius + height);
+        return 2*PI*radius*(radius+height);
     }
 
     void display() const {
