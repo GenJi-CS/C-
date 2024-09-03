@@ -1,4 +1,4 @@
-/*Suppose that the father and mother of a daughter have monthly income Rs.70, 000.00 and
+/*10. Suppose that the father and mother of a daughter have monthly income Rs.70, 000.00 and
 Rs. 60, 000.00 respectively. Their daughter’s monthly expense for education is a total of
 5% of the father’s income and 7% of the mother’s income. How much money is needed
 for one year of education for the daughter? Using a suitable type of inheritance best

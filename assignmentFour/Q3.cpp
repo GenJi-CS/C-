@@ -1,4 +1,4 @@
-/*An organization has two types of employees: regular and adhoc. Regular employees get a
+/*11. An organization has two types of employees: regular and adhoc. Regular employees get a
 salary which is basic + DA + HRA where DA is 10% of basic and HRA is 30% of basic.
 Adhoc employees are daily wagers who get a salary which is equal to number * wage
 where number is number of days worked.

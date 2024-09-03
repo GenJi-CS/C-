@@ -1,4 +1,4 @@
-//Write a program to overload the operator * and find the multiplication of two matrices M1 and M2.
+//9. Write a program to overload the operator * and find the multiplication of two matrices M1 and M2.
 
 #include <iostream>
 
